@@ -9,8 +9,7 @@ internal class PhotoTest {
     private val fullPhoto = "full"
     private val invalidPhoto = ""
 
-    @Test
-    fun photo_getSmallestPhoto_hasMediumPhoto() {
+    @Test fun photo_getSmallestPhoto_hasMediumPhoto() {
         // GIVEN
         val photo = Media.Photo(mediumPhoto, fullPhoto)
         val expectedPhoto = mediumPhoto
@@ -22,8 +21,7 @@ internal class PhotoTest {
         assertEquals(expectedPhoto, smallestPhoto)
     }
 
-    @Test
-    fun photo_getSmallestPhoto_noMediumPhoto() {
+    @Test fun photo_getSmallestPhoto_noMediumPhoto() {
         val photo = Media.Photo(invalidPhoto, fullPhoto)
         val expectedPhoto = fullPhoto
 
@@ -34,8 +32,7 @@ internal class PhotoTest {
         assertEquals(expectedPhoto, getSmallestPhoto)
     }
 
-    @Test
-    fun photo_getSmallestAvailablePhoto_invalidPhoto() {
+    @Test fun photo_getSmallestAvailablePhoto_invalidPhoto() {
         val photo = Media.Photo(invalidPhoto, invalidPhoto)
         val expectedPhoto = Media.Photo.EMPTY_PHOTO
 
