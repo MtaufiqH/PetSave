@@ -55,7 +55,7 @@ data class Media(
   ) {
 
     companion object {
-      private const val EMPTY_PHOTO = ""
+      const val EMPTY_PHOTO = ""
     }
 
     fun getSmallestAvailablePhoto(): String {
